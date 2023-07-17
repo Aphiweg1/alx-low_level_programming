@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints a text according number
+ * main - Prints a text according to the number's last didgit
  * Return: Always (Success)
  *
  */
