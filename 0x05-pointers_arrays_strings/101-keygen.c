@@ -19,7 +19,7 @@ password[i] = rand() % 94 + 33;
 putchar(password[i]);
 sum += password[i];
 }
-password[15] = 2772 - sum;
+password[15] = (2772 - sum) % 94 + 33;
 putchar(password[15]);
 password[16] = '\0';
 printf("\nTada! Congrats\n");
