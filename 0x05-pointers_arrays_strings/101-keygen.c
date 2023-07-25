@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
  *   main - Generates random valid passwords for the
  *   program 101-crackme.
@@ -9,28 +8,25 @@
  */
 int main(void)
 {
-char password[PASSWORD_LENGTH + 1];
-int index, sum = 0;
+int password[64], i, sum = 0, n;
+srand(time(NULL));
 
-srand(time(0));
-for (index = 0; index < PASSWORD_LENGTH; index++)
+for (i = 0; i < 64; i++)
 {
-password[index] = 33 + rand() % 94;
-sum += password[index];
-}
-password[index] = '\0';
- while (sum != 2772) 
-{
-int diff = sum - 2772;
-int change_index = rand() % PASSWORD_LENGTH;
+password[i] = rand() % 78;
+sum += password[i] + '0';
+putchar(password[i] + '0');
 
-if (password[change_index] - diff >= 33 && password[change_index] - diff <= 126)
+if ((2772 - sum) - '0' < 78)
+sum+= password[i] + '0';
+putchar(password[i] + '0');
+if ((2772 - sum) - '0' < 78)
 {
-password[change_index] -= diff;
-sum -= diff;
+n = 2772 - sum - '0';
+sum += n;
+putchar(n + '0');
+break;
 }
 }
-printf("%s\n", password);
-
-return 0;
+return (0);
 }
