@@ -17,7 +17,7 @@ srand(time(0));
 while (sum < 2772)
 {
 password[index] = 33 + rand() % 94;
-sum += password[index];
+sum += password[index++];
 }
 password[index] = '\0';
 
@@ -28,7 +28,7 @@ diff_half2 = (sum - 2772) /2;
 
 if ((sum - 2772) % 2 != 0)
 diff_half1++;
-for [index = 0; password[index]; index++)
+for (index = 0; password[index]; index++)
 {
 if (password[index] >= (33 + diff_half1))
 {
