@@ -1,20 +1,21 @@
+#include <stdio.h>
 #include "main.h"
-#include <stddef.h>
 
 /**
-  * _strchr - This is my funcion
- * @s: This my string of char
- * @c: This is my character
- * Return: This is my resulti
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
  */
 char *_strchr(char *s, char c)
 {
-	for (; ; s++)
+	int i;
+
+	for (i = 0; s[i] >= '\0'; i++)
 	{
-		if (*s == c)
-			return (s);
-		if (*s == 0)
-			return (NULL);
+		if (s[i] == c)
+			return (s + i);
 	}
+
 	return (NULL);
 }

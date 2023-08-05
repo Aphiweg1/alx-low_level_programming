@@ -1,11 +1,11 @@
 #include "main.h"
+
 /**
-* _memset - This is my function copy the number the character to S
- * @s: This is my entry and return
- * @b: This is the character to copy
- * @n: This is the number of Bytes
- *
- * Return: This is my result and Return S
+ * _memset - Entry point
+ * @s: pointed destination
+ * @b: constant byte
+ * @n: bytes
+ * Return: Always 0 (Success)
  */
 char *_memset(char *s, char b, unsigned int n)
 {
