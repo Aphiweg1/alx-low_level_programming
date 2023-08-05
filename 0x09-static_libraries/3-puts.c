@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _puts - Escribir un texto
+* _puts - prints a string, followed by a new line, to stdout
  *
  * @str: This is my entry
  *
