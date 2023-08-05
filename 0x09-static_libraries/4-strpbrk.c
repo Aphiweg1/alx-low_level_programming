@@ -1,25 +1,25 @@
+#include <stdio.h>
 #include "main.h"
-#include <stddef.h>
 
 /**
- * _strpbrk - This is my function
- * @s: This is my entry
- * @accept: This is my second entry
- * Return: This is my return
+ * _strpbrk - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
+
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int a, b;
+	int i, n;
 
-	for (a = 0; s[a] != '\0'; a++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (b = 0; accept[b] != '\0'; b++)
+		for (n = 0; accept[n] != '\0'; n++)
 		{
-			if (accept[b] == s[a])
-			{
-				return (&s[a]);
-			}
+			if (s[i] == accept[n])
+				return (s + i);
 		}
 	}
+
 	return (NULL);
 }

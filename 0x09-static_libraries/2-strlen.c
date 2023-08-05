@@ -1,17 +1,17 @@
-#include "main.h"
-/**
- * _strlen - This function is equal to strlen
- *
- * @s: this is my entry
- *
- * Return: the las character
- */
-int _strlen(char *s)
-{
-	int a;
+#include <stdio.h>
 
-	for (a = 0; s[a] != '\0' ; a++)
-	{
-	}
-	return (a);
+/**
+ *  _strlen - Returns the length of a string.
+ * @str: The string to get the length of
+ * Return: The length of @str.
+ */
+size_t _strlen(const char *str)
+
+{
+size_t length = 0;
+
+while (*str++)
+length++;
+return (length);
+
 }
